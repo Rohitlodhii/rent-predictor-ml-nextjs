@@ -47,12 +47,11 @@ export default function Home() {
     setIsLoading(true)
     
     try {
-      // Type cast to integers
+            // Type cast to integers
       const bhkInt = parseInt(bhk)
       const areaInt = parseInt(area)
-
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || ''
-      const response = await fetch(`${apiUrl}/predict`, {
+      
+      const response = await fetch('/api/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,15 +64,16 @@ export default function Home() {
       })
 
       if (!response.ok) {
-        throw new Error('Failed to fetch prediction')
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to fetch prediction')
       }
 
       const predictionData = await response.json()
       setResult({
-        location: location,
-        area: areaInt,
-        bhk: bhkInt,
-        predicted_rent: predictionData.predicted_rent || predictionData.rent || predictionData.price
+        location: predictionData.location,
+        area: predictionData.area,
+        bhk: predictionData.bhk,
+        predicted_rent: predictionData.predicted_rent
       })
       setShowResult(true)
     } catch (err) {
