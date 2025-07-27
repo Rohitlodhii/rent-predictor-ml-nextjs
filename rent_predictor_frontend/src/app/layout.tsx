@@ -6,7 +6,8 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 
 const dmSans = DM_Sans({
-  weight : ['100' , '200' , '400' , '600' ,'800']
+  weight : ['100' , '200' , '400' , '600' ,'800'],
+  subsets : ['latin']
 })
 
 export const metadata = {
