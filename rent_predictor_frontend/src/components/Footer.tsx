@@ -20,13 +20,13 @@ const Footer = () => {
             @rohitlodhii 
         </div>
         <div className='flex gap-2'>
-            <Button size={"sm"} variant={"noShadow"} className='flex rounded-full px-3 items-center justify-center h-10 '>
+            <Button size={"sm"} variant={"noShadow"} className='flex rounded-full px-3 items-center justify-center h-10 ' onClick={() => window.open('https://www.linkedin.com/in/rohitlodhiii', '_blank')}>
                 <Linkedin className='w-4 h-4 '/> 
             </Button>
-            <Button size={"sm"} variant={"noShadow"} className='flex rounded-full px-3 items-center justify-center h-10 '>
+            <Button size={"sm"} variant={"noShadow"} className='flex rounded-full px-3 items-center justify-center h-10 ' onClick={() => window.open('https://www.linkedin.com/in/rohitlodhiii', '_blank')}>
                 <Instagram className='w-4 h-4 '/> 
             </Button>
-            <Button size={"sm"} variant={"noShadow"} className='flex rounded-full px-3 items-center justify-center h-10 '>
+            <Button size={"sm"} variant={"noShadow"} className='flex rounded-full px-3 items-center justify-center h-10 ' onClick={() => window.open('https://www.linkedin.com/in/rohitlodhiii', '_blank')}>
                 <Twitter className='w-4 h-4 '/> 
             </Button>
             
