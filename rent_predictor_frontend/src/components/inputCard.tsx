@@ -115,7 +115,7 @@ type Props = {
                 </Button>
             ) : (
                   <Button className="w-full " onClick={onPredict}>
-                  🔮 Predict
+                  🔮 Predict ( server not running  ) 
                 </Button>
             )}
         
