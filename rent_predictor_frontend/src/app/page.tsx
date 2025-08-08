@@ -77,7 +77,7 @@ export default function Home() {
       })
       setShowResult(true)
     } catch (err) {
-      setError('Sorry brick by brick.')
+      setError('sorry : server is stopped to save money! ')
       toast("Failed to get prediction", {
         description: "Maybe server not running",
       })
